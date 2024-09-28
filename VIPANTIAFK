@@ -1,0 +1,131 @@
+local ScreenGui = Instance.new("ScreenGui")
+local mainFrame = Instance.new("Frame")
+local settingsButton = Instance.new("TextButton")
+local settingsFrame = Instance.new("Frame")
+local closeButton = Instance.new("TextButton")
+local antiLagButton = Instance.new("TextButton")
+local antiCrashButton = Instance.new("TextButton")
+local antiAfkButton = Instance.new("TextButton")
+local antiBangButton = Instance.new("TextButton")
+local foScriptButton = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+mainFrame.Name = "MainFrame"
+mainFrame.Parent = ScreenGui
+mainFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+mainFrame.Position = UDim2.new(0.5, -200, 0.2, 0)
+mainFrame.Size = UDim2.new(0, 400, 0, 150)
+mainFrame.BackgroundTransparency = 0.5
+mainFrame.Active = true
+mainFrame.Draggable = true
+
+settingsButton.Name = "SettingsButton"
+settingsButton.Parent = mainFrame
+settingsButton.Size = UDim2.new(0, 100, 0, 50)
+settingsButton.Position = UDim2.new(0.5, -50, 0.5, -25)
+settingsButton.Text = "Settings"
+settingsButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+
+settingsFrame.Name = "SettingsFrame"
+settingsFrame.Parent = mainFrame
+settingsFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+settingsFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
+settingsFrame.Size = UDim2.new(0, 300, 0, 200)
+settingsFrame.BackgroundTransparency = 0.5
+settingsFrame.Visible = false
+
+-- إضافة نص الرسالة خارج إطار الإعدادات
+local messageLabel = Instance.new("TextLabel")
+messageLabel.Name = "MessageLabel"
+messageLabel.Parent = mainFrame
+messageLabel.Size = UDim2.new(0, 400, 0, 50)
+messageLabel.Position = UDim2.new(0, 0, 0, -50)
+messageLabel.Text = "ANTIAFK \"VIP\" BY FARES WORKING"
+messageLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+messageLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+messageLabel.TextScaled = true
+messageLabel.BackgroundTransparency = 0.5
+
+closeButton.Name = "CloseButton"
+closeButton.Parent = settingsFrame
+closeButton.Size = UDim2.new(0, 100, 0, 50)
+closeButton.Position = UDim2.new(0.5, -50, 0, 10)
+closeButton.Text = "رجوع"
+closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+
+antiLagButton.Name = "AntiLagButton"
+antiLagButton.Parent = settingsFrame
+antiLagButton.Size = UDim2.new(0, 100, 0, 50)
+antiLagButton.Position = UDim2.new(0.5, -50, 0.25, 0)
+antiLagButton.Text = "ANTILAG"
+antiLagButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+
+antiCrashButton.Name = "AntiCrashButton"
+antiCrashButton.Parent = settingsFrame
+antiCrashButton.Size = UDim2.new(0, 100, 0, 50)
+antiCrashButton.Position = UDim2.new(0.5, -50, 0.5, 0)
+antiCrashButton.Text = "ANTICRASH"
+antiCrashButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+
+antiAfkButton.Name = "AntiAfkButton"
+antiAfkButton.Parent = settingsFrame
+antiAfkButton.Size = UDim2.new(0, 100, 0, 50)
+antiAfkButton.Position = UDim2.new(0.5, -50, 0.75, 0)
+antiAfkButton.Text = "ANTIAFK"
+antiAfkButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+
+antiBangButton.Name = "AntiBangButton"
+antiBangButton.Parent = settingsFrame
+antiBangButton.Size = UDim2.new(0, 100, 0, 50)
+antiBangButton.Position = UDim2.new(0.5, -50, 1, 0)
+antiBangButton.Text = "ANTIBANG"
+antiBangButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+
+foScriptButton.Name = "FoScriptButton"
+foScriptButton.Parent = settingsFrame
+foScriptButton.Size = UDim2.new(0, 100, 0, 50)
+foScriptButton.Position = UDim2.new(0.5, -50, 1.25, 0)
+foScriptButton.Text = "FO SCRIPT"
+foScriptButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+
+-- وظائف الأزرار
+settingsButton.MouseButton1Click:Connect(function()
+    settingsFrame.Visible = true
+end)
+
+closeButton.MouseButton1Click:Connect(function()
+    settingsFrame.Visible = false
+end)
+
+antiLagButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/DYdj2nD1"))()
+end)
+
+antiCrashButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FaresXForest/ANTICRASHV8/refs/heads/main/ANTICRASH%20ANTI"))()
+end)
+
+antiAfkButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FaresXForest/jujutsu-kaisan-/refs/heads/main/jujutsu"))()
+end)
+
+antiBangButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/BloodyBurns/Hex/main/Iv%20Admin%20v3.lua'))()
+end)
+
+foScriptButton.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FaresXForest/smlhv3/main/V3"))()
+end)
+
+-- ألوان قوس قزح
+local function rainbowColor()
+    local hue = 0
+    while true do
+        mainFrame.BackgroundColor3 = Color3.fromHSV(hue, 1, 1)
+        hue = (hue + 0.01) % 1
+        wait(0.1)
+    end
+end
+
+coroutine.wrap(rainbowColor)()
